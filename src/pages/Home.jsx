@@ -1,41 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { getAllItemsService } from '@/services/itemServices';
-import { useAuthContext } from '@/hooks/useAuth';
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { getAllItemsService } from '@/services/itemServices'
+import { useAuthContext } from '@/hooks/useAuth'
 
 const Home = () => {
-  const [itemsData, setItemsData] = useState([]);
-  const { isAuth } = useAuthContext();
+  const [itemsData, setItemsData] = useState([])
+  const { isAuth } = useAuthContext()
 
   useEffect(() => {
     const getItemsData = async () => {
       try {
-        const response = await getAllItemsService();
+        const response = await getAllItemsService()
         if (response.status === 200) {
-          setItemsData(response.data);
+          setItemsData(response.data)
         }
       } catch (error) {
-        console.log('error', error.message);
+        console.log('error', error.message)
       }
-    };
-    getItemsData();
-  }, []);
+    }
+    getItemsData()
+  }, [])
 
   const renderBuyButton = (product) => {
     if (isAuth) {
       return (
-        <Link to={`/itemsdetails/${product.id}`} className='btn btn-primary'>
+        <Link to={`/product/${product.id}`} className='btn btn-primary'>
           Comprar
         </Link>
-      );
+      )
     } else {
       return (
-        <Link to={`/login`} className='btn btn-primary'>
+        <Link to='/login' className='btn btn-primary'>
           Comprar
         </Link>
-      );
+      )
     }
-  };
+  }
 
   return (
     <>
@@ -50,17 +50,17 @@ const Home = () => {
                 src={product.image}
                 alt={product.product_name}
               />
-               <div className='card-body'>
+              <div className='card-body'>
                 <h5 className='card-title'>{product.product_name}</h5>
                 <p className='card-text'>{product.description}</p>
                 {renderBuyButton(product)}
               </div>
-             
+
             </div>
           ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

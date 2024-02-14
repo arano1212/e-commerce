@@ -64,8 +64,8 @@ const Secret = () => {
                   <tr>
                     <th style={{ width: '34%' }} />
                     <th style={{ width: '22%' }}>
-                      <font style={{ verticalAlign: 'inherit' }}/>
-                        
+                      <font style={{ verticalAlign: 'inherit' }} />
+
                     </th>
                     <th style={{ width: '22%' }}>
                       <font style={{ verticalAlign: 'inherit' }}>
@@ -83,7 +83,7 @@ const Secret = () => {
                       </font>
                     </th>
                     <td />
-                    
+
                     <td>
                       <img src={checkIcon} alt='Check' width={24} height={24} />
                     </td>
