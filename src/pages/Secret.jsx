@@ -58,6 +58,93 @@ const Secret = () => {
                 </button>
               </div>
             </div>
+            <div className='table-responsive'>
+              <table className='table text-center'>
+                <thead>
+                  <tr>
+                    <th style={{ width: '34%' }} />
+                    <th style={{ width: '22%' }}>
+                      <font style={{ verticalAlign: 'inherit' }}/>
+                        
+                    </th>
+                    <th style={{ width: '22%' }}>
+                      <font style={{ verticalAlign: 'inherit' }}>
+                        <font style={{ verticalAlign: 'inherit' }}>el Perfil de ADMINISTRADOR incluye:</font>
+                      </font>
+                    </th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope='row' className='text-start'>
+                      <font style={{ verticalAlign: 'inherit' }}>
+                        <font style={{ verticalAlign: 'inherit' }}>Soporte por correo electronico</font>
+                      </font>
+                    </th>
+                    <td />
+                    
+                    <td>
+                      <img src={checkIcon} alt='Check' width={24} height={24} />
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope='row' className='text-start'>
+                      <font style={{ verticalAlign: 'inherit' }}>
+                        <font style={{ verticalAlign: 'inherit' }}>Soporte Prioritario</font>
+                      </font>
+                    </th>
+                    <td />
+                    <td>
+                      <img src={checkIcon} alt='Check' width={24} height={24} />
+                    </td>
+
+                  </tr>
+                </tbody>
+                <tbody>
+                  <tr>
+                    <th scope='row' className='text-start'>
+                      <font style={{ verticalAlign: 'inherit' }}>
+                        <font style={{ verticalAlign: 'inherit' }}>Acceso al centro de ayuda</font>
+                      </font>
+                    </th>
+                    <td />
+                    <td>
+                      <img src={checkIcon} alt='Check' width={24} height={24} />
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <th scope='row' className='text-start'>
+                      <font style={{ verticalAlign: 'inherit' }}>
+                        <font style={{ verticalAlign: 'inherit' }}>Publicar productos</font>
+                      </font>
+                    </th>
+                    <td />
+                    <td>
+                      <img src={checkIcon} alt='Check' width={24} height={24} />
+                    </td>
+
+                  </tr>
+
+                  <tr>
+                    <th scope='row' className='text-start'>
+                      <font style={{ verticalAlign: 'inherit' }}>
+                        <font style={{ verticalAlign: 'inherit' }}>
+                          Envios gratis
+                        </font>
+                      </font>
+                    </th>
+                    <td />
+                    <td>
+                      <img src={checkIcon} alt='Check' width={24} height={24} />
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
           )
         : (
