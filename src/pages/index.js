@@ -5,5 +5,6 @@ import Secret from '@/pages/Secret'
 import Signup from '@/pages/Signup'
 import About from '@/pages/About'
 import Sales from '@/pages/Sales'
+import ProductDetails from '@/pages/ProductDetails'
 
-export { Dashboard, Home, Login, Secret, Signup, About, Sales }
+export { Dashboard, Home, Login, Secret, Signup, About, Sales, ProductDetails }
