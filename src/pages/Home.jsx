@@ -24,7 +24,7 @@ const Home = () => {
   const renderBuyButton = (product) => {
     if (isAuth) {
       return (
-        <Link to={`/productdetails/${product.id}`} className='btn btn-primary'>
+        <Link to='/modal' className='btn btn-primary'>
           Comprar
         </Link>
       )

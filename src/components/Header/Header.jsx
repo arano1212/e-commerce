@@ -1,10 +1,16 @@
 import { NavLink } from 'react-router-dom'
 import { useAuthContext } from '@/hooks/useAuth'
 import logo from '@/assets/react.svg'
+import carshopping from '@/assets/carshopping.svg'
 import './header.scss'
+import ModalCar from '../ModalCar/ModalCar'
+import { useState } from 'react'
 
 const Header = () => {
   const { isAuth, logout } = useAuthContext()
+  const [show, setShow] = useState(false)
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   return (
     <>
@@ -67,6 +73,9 @@ const Header = () => {
                       LogOut
                     </NavLink>
                   </div>
+                  <button className='btn btn-primary' type='submit' onClick={handleShow}>
+                    <img className='car-shopping-icon' src={carshopping} alt='logo' style={{ width: '35px', height: '30px' }} />
+                  </button>
                 </>
                 )
               : (
@@ -92,6 +101,7 @@ const Header = () => {
           </div>
         </div>
       </header>
+      <ModalCar show={show} handleClose={handleClose} />
     </>
   )
 }

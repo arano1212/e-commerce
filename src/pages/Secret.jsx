@@ -1,6 +1,6 @@
 import { useAuthContext } from '@/hooks/useAuth'
 import checkIcon from '@/assets/check.svg'
-
+import { Link } from 'react-router-dom'
 const Secret = () => {
   const { userPayload } = useAuthContext()
 
@@ -251,11 +251,13 @@ const Secret = () => {
                         </font>
                       </li>
                     </ul>
-                    <button type='button' className='w-100 btn btn-lg btn-primary'>
-                      <font style={{ verticalAlign: 'inherit' }}>
-                        <font style={{ verticalAlign: 'inherit' }}>Adquirir</font>
-                      </font>
-                    </button>
+                    <Link to='/pay'>
+                      <button type='button' className='w-100 btn btn-lg btn-primary'>
+                        <font style={{ verticalAlign: 'inherit' }}>
+                          <font style={{ verticalAlign: 'inherit' }}>Adquirir</font>
+                        </font>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
